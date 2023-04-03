@@ -1,13 +1,7 @@
-import { useState } from "react";
-
-import "./App.css";
+import LoginPage from "./assets/Components/LoginPage";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Atena Form</h1>
-    </div>
-  );
+  return <LoginPage />;
 }
 
 export default App;
