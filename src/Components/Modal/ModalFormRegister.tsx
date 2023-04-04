@@ -7,12 +7,12 @@ interface ModalFormRegisterProps {
 }
 
 const ModalFormRegister = ({ onSubmit }: ModalFormRegisterProps) => {
-  const [email, setEmail] = useState("");
+  const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
-  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value);
+  const handleUserNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUserName(event.target.value);
   };
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +25,7 @@ const ModalFormRegister = ({ onSubmit }: ModalFormRegisterProps) => {
 
   const handleRegister = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit(email, password, name);
+    onSubmit(username, password, name);
   };
 
   return (
@@ -36,7 +36,7 @@ const ModalFormRegister = ({ onSubmit }: ModalFormRegisterProps) => {
       </FormControl>
       <FormControl id="email" isRequired>
         <FormLabel>Email</FormLabel>
-        <Input type="email" value={email} onChange={handleEmailChange} />
+        <Input type="email" value={username} onChange={handleUserNameChange} />
       </FormControl>
       <FormControl id="password" isRequired>
         <FormLabel>Password</FormLabel>

@@ -9,9 +9,11 @@ function LoginPage() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   const openModal = () => {
     setIsModalOpen(true);
   };

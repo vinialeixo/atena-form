@@ -19,12 +19,16 @@ interface ModalFormProps {
 }
 
 const ModalForm = ({ isOpen, onClose, onSubmit }: ModalFormProps) => {
-  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
-  const handleFormSubmit = () => {
-    onSubmit(email, password, name);
+  const handleFormSubmit = (
+    userName: string,
+    password: string,
+    name: string
+  ) => {
+    onSubmit(userName, password, name);
   };
 
   return (

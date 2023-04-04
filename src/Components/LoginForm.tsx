@@ -1,12 +1,6 @@
 import { useState } from "react";
 
-import {
-  FormControl,
-  FormLabel,
-  Input,
-  Button,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
 
 interface LoginFormPros {
   onSubmit: (username: string, password: string) => void;
