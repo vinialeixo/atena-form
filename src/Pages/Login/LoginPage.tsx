@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, Heading, Text, Center } from "@chakra-ui/react";
 import LoginForm from "../../Components/LoginForm";
 import { useNavigate } from "react-router-dom";
-import ModalForm from "../../Components/ModalForm";
+import ModalForm from "../../Components/Modal/ModalForm";
 
 function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,8 +25,7 @@ function LoginPage() {
         return navigate("/home");
       }
       setError("Usuario ou senha Incorretos");
-    }, 2000);
-    console.log(username, password);
+    }, 1500);
   };
 
   return (
@@ -63,7 +62,7 @@ function LoginPage() {
       <ModalForm
         isOpen={isModalOpen}
         onClose={closeModal}
-        onSubmit={() => console.log("submit")}
+        onSubmit={() => console.log("deu certo")}
       />
     </>
   );

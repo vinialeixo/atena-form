@@ -47,7 +47,9 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
       <Button mt={2} type="submit">
         Enter
       </Button>
-      <Button onClick={openModal}>Cadastrar</Button>
+      <Button mt={2} onClick={openModal}>
+        Cadastrar
+      </Button>
     </form>
   );
 }
