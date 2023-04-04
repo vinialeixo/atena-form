@@ -1,11 +1,19 @@
 import { useState } from "react";
-import { FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
+
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  Button,
+  useDisclosure,
+} from "@chakra-ui/react";
 
 interface LoginFormPros {
   onSubmit: (username: string, password: string) => void;
+  openModal: () => void;
 }
 
-function LoginForm({ onSubmit }: LoginFormPros) {
+function LoginForm({ onSubmit, openModal }: LoginFormPros) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,7 +44,10 @@ function LoginForm({ onSubmit }: LoginFormPros) {
           onChange={handlePasswordChange}
         />
       </FormControl>
-      <Button type="submit">Enter</Button>
+      <Button mt={2} type="submit">
+        Enter
+      </Button>
+      <Button onClick={openModal}>Cadastrar</Button>
     </form>
   );
 }
