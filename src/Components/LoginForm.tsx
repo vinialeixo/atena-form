@@ -10,7 +10,6 @@ interface LoginFormPros {
 function LoginForm({ onSubmit, openModal }: LoginFormPros) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
 
   const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value);
@@ -34,7 +33,6 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
       <FormControl id="password" isRequired>
         <FormLabel>Password</FormLabel>
         <Input
-          type={showPassword ? "text" : "password"}
           placeholder="*******"
           size="lg"
           onChange={handlePasswordChange}

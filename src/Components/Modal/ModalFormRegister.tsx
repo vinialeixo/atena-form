@@ -10,6 +10,7 @@ const ModalFormRegister = ({ onSubmit }: ModalFormRegisterProps) => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleUserNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUserName(event.target.value);
@@ -25,7 +26,11 @@ const ModalFormRegister = ({ onSubmit }: ModalFormRegisterProps) => {
 
   const handleRegister = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit(username, password, name);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      onSubmit(username, password, name);
+    }, 1500);
   };
 
   return (
