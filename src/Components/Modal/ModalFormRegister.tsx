@@ -51,7 +51,9 @@ const ModalFormRegister = ({ onSubmit }: ModalFormRegisterProps) => {
           onChange={handlePasswordChange}
         />
       </FormControl>
-      <Button type="submit">Registrar</Button>
+      <Button type="submit" mt={1}>
+        Registrar
+      </Button>
     </form>
   );
 };

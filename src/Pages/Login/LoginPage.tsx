@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Box, Heading, Text, Center } from "@chakra-ui/react";
-import LoginForm from "../../Components/LoginForm";
+import LoginForm from "./LoginForm";
 import { useNavigate } from "react-router-dom";
 import ModalForm from "../../Components/Modal/ModalForm";
 import { Spinner } from "@chakra-ui/react";
-import LogoAtenaPage from "./LogoAtenaPage";
+import LogoAtenaPage from "../../Components/UI/LogoAtenaPage";
 
 const LoginPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -43,10 +43,13 @@ const LoginPage = () => {
         height="100vh"
         justifyContent="center"
         alignItems="center"
-        bgGradient="linear(to-r, #d19a00, #dba101,#ffba00)"
+        //bgGradient="linear(to-l, #DFA400, #FAB800, #DFA400)"
+        bgImage="url('	https://atena.io/img/cloud-computing.jpg')"
+        bgSize="cover"
+        minH="100vh"
       >
         <Box
-          p={8}
+          p={10}
           maxWidth="500px"
           borderWidth={1}
           borderRadius={8}
@@ -60,7 +63,7 @@ const LoginPage = () => {
           </Box>
           <Box mt={4}>
             <LoginForm onSubmit={handleLogin} openModal={openModal} />
-            {isLoading && <Spinner />}
+            {isLoading && <Spinner mt={2} />}
             {error && (
               <Text mt={4} color="red.500">
                 {" "}

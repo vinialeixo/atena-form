@@ -40,7 +40,8 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
         <FormLabel>Password</FormLabel>
         <Input
           placeholder="*******"
-          size="lg"
+          type="password"
+          value={password}
           onChange={handlePasswordChange}
         />
       </FormControl>

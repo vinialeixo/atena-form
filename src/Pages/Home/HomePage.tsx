@@ -26,7 +26,7 @@ const HomePage = () => {
       >
         <Button
           bg="#c54226"
-          textColor="#ffffff"
+          textColor="#060606"
           size="md"
           mt={10}
           mr={1000}
