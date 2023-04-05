@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-import { FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  Button,
+  ButtonGroup,
+} from "@chakra-ui/react";
 
 interface LoginFormPros {
   onSubmit: (username: string, password: string) => void;
@@ -41,7 +47,7 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
       <Button mt={2} type="submit">
         Enter
       </Button>
-      <Button mt={2} onClick={openModal}>
+      <Button mt={2} ml={5} onClick={openModal}>
         Cadastrar
       </Button>
     </form>

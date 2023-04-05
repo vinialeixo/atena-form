@@ -1,4 +1,4 @@
-import { Box, Button, Center, Heading, Image } from "@chakra-ui/react";
+import { Box, Button, Center, Flex, Heading, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -24,13 +24,21 @@ const HomePage = () => {
         transition={{ duration: 1 }}
         textAlign="center"
       >
-        <Heading as="h1" size="4xl" mb={8} color="white">
-          Bem-vindo
-        </Heading>
-        <Button colorScheme="teal" size="lg" onClick={hangleBackHome}>
+        <Button
+          bg="#c54226"
+          textColor="#ffffff"
+          size="md"
+          mt={10}
+          mr={1000}
+          onClick={hangleBackHome}
+        >
           Voltar Login
         </Button>
-        <Box>
+
+        <Heading as="h1" size="4xl" mt={10} mb={8} color="white">
+          Bem-vindo
+        </Heading>
+        <Box ml={525}>
           <Image src={"https://atena.io/img/atena-logo-white.png"} />
         </Box>
       </MotionBox>

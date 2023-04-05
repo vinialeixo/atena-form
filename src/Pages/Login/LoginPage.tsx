@@ -43,6 +43,7 @@ const LoginPage = () => {
         height="100vh"
         justifyContent="center"
         alignItems="center"
+        bgGradient="linear(to-r, #d19a00, #dba101,#ffba00)"
       >
         <Box
           p={8}
@@ -51,13 +52,13 @@ const LoginPage = () => {
           borderRadius={8}
           boxShadow="lg"
           mb={15}
+          bg="white"
         >
           <LogoAtenaPage />
           <Box mt={8} justifyContent="center">
             <Heading>LOGIN</Heading>
-            <Text color="red.500">Insira suas credenciais</Text>
           </Box>
-          <Box mt={8}>
+          <Box mt={4}>
             <LoginForm onSubmit={handleLogin} openModal={openModal} />
             {isLoading && <Spinner />}
             {error && (
