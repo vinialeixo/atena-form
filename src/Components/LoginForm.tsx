@@ -10,6 +10,7 @@ interface LoginFormPros {
 function LoginForm({ onSubmit, openModal }: LoginFormPros) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value);
@@ -20,7 +21,7 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
   };
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault(); //para pagina nao recarregar
     onSubmit(username, password);
   };
 
@@ -33,8 +34,9 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
       <FormControl id="password" isRequired>
         <FormLabel>Password</FormLabel>
         <Input
-          type="passwprd"
-          value={password}
+          type={showPassword ? "text" : "password"}
+          placeholder="*******"
+          size="lg"
           onChange={handlePasswordChange}
         />
       </FormControl>

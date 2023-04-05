@@ -3,12 +3,17 @@ import { Box, Heading, Text, Center } from "@chakra-ui/react";
 import LoginForm from "../../Components/LoginForm";
 import { useNavigate } from "react-router-dom";
 import ModalForm from "../../Components/Modal/ModalForm";
+import { Spinner } from "@chakra-ui/react";
 
 function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleRegister = (userName: string, password: string, name: string) => {
+    navigate("/home");
+  };
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -46,12 +51,12 @@ function LoginPage() {
           boxShadow="lg"
         >
           <Box mt={8} justifyContent="center">
-            <Heading>Entre na Sua Conta</Heading>
+            <Heading>LOGIN</Heading>
             <Text color="red.500">Insira suas credenciais</Text>
           </Box>
           <Box mt={8}>
             <LoginForm onSubmit={handleLogin} openModal={openModal} />
-            {isLoading && <Text mt={4}>Carregando...</Text>}
+            {isLoading && <Spinner />}
             {error && (
               <Text mt={4} color="red.500">
                 {" "}
@@ -64,7 +69,7 @@ function LoginPage() {
       <ModalForm
         isOpen={isModalOpen}
         onClose={closeModal}
-        onSubmit={() => console.log("deu certo")}
+        onSubmit={handleRegister}
       />
     </>
   );
