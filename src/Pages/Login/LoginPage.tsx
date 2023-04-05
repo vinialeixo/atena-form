@@ -4,8 +4,9 @@ import LoginForm from "../../Components/LoginForm";
 import { useNavigate } from "react-router-dom";
 import ModalForm from "../../Components/Modal/ModalForm";
 import { Spinner } from "@chakra-ui/react";
+import LogoAtenaPage from "./LogoAtenaPage";
 
-function LoginPage() {
+const LoginPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -49,7 +50,9 @@ function LoginPage() {
           borderWidth={1}
           borderRadius={8}
           boxShadow="lg"
+          mb={15}
         >
+          <LogoAtenaPage />
           <Box mt={8} justifyContent="center">
             <Heading>LOGIN</Heading>
             <Text color="red.500">Insira suas credenciais</Text>
@@ -73,6 +76,6 @@ function LoginPage() {
       />
     </>
   );
-}
+};
 
 export default LoginPage;
