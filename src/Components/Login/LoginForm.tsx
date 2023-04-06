@@ -5,7 +5,7 @@ import {
   FormLabel,
   Input,
   Button,
-  ButtonGroup,
+  Tooltip,
 } from "@chakra-ui/react";
 
 interface LoginFormPros {
@@ -13,7 +13,7 @@ interface LoginFormPros {
   openModal: () => void;
 }
 
-function LoginForm({ onSubmit, openModal }: LoginFormPros) {
+const LoginForm = ({ onSubmit, openModal }: LoginFormPros) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -33,11 +33,15 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
   return (
     <form onSubmit={handleLogin}>
       <FormControl id="username" isRequired>
-        <FormLabel> User </FormLabel>
+        <Tooltip label="teste@teste.com" placement="left">
+          <FormLabel> E-mail </FormLabel>
+        </Tooltip>
         <Input type="text" value={username} onChange={handleUsernameChange} />
       </FormControl>
       <FormControl id="password" isRequired>
-        <FormLabel>Password</FormLabel>
+        <Tooltip label="12345" placement="left">
+          <FormLabel>Password</FormLabel>
+        </Tooltip>
         <Input
           placeholder="*******"
           type="password"
@@ -53,6 +57,6 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
       </Button>
     </form>
   );
-}
+};
 
 export default LoginForm;
