@@ -1,5 +1,9 @@
 # Atena Form
 
-<h2>Desafio Formulário Atena</h2>
+<h3>Athena Form Challenge</h3>
 </br>
-<div>Recentemente, tive a oportunidade de criar um projeto de formulário para uma entrevista de emprego, utilizei as tecnologias mais modernas do mercado, como React, Typescript e a lib Chakra UI. O objetivo era desenvolver um formulário de cadastro de usuário.</div>
+<div>Recently, I had the opportunity to create a form project in a Challenge, using the most modern technologies on the market, such as React, Typescript, and the Chakra UI lib. The goal was to develop a user registration form.</div>
+<div><strong>React</strong> was used as the main library for the development of the form's user interface.</div>
+<div>Additionally, <strong>Typescript</strong> was used to add static typing features to the code, ensuring greater security and reliability to the form. With Typescript, it was possible to validate the code at development time, avoiding common errors during code execution.</div>
+<div>Finally, the <strong>Chakra</strong> UI lib was used to create a visually attractive and highly usable user interface. The library offers a wide variety of features, such as custom themes, typography, and color schemes.</div>
+<div>This project allowed me to improve my development skills and learn new important concepts.</div>
