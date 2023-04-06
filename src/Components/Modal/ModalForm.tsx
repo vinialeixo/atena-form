@@ -23,7 +23,7 @@ const ModalForm = ({ isOpen, onClose, onSubmit }: ModalFormProps) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Área de Cadastro</ModalHeader>
+          <ModalHeader>Register Area</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <ModalFormRegister onSubmit={onSubmit} isOpen={false} />

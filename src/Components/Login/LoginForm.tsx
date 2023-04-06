@@ -46,10 +46,10 @@ function LoginForm({ onSubmit, openModal }: LoginFormPros) {
         />
       </FormControl>
       <Button mt={2} type="submit">
-        Enter
+        Sign In
       </Button>
       <Button mt={2} ml={5} onClick={openModal}>
-        Cadastrar
+        Sign Up
       </Button>
     </form>
   );

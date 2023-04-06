@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, Heading, Text, Center } from "@chakra-ui/react";
-import LoginForm from "./LoginForm";
+import LoginForm from "../../Components/Login/LoginForm";
 import { useNavigate } from "react-router-dom";
 import ModalForm from "../../Components/Modal/ModalForm";
 import { Spinner } from "@chakra-ui/react";
@@ -32,7 +32,7 @@ const LoginPage = () => {
       if (username === "teste@teste.com" && password === "12345") {
         return navigate("/home");
       }
-      setError("Usuario ou senha Incorretos");
+      setError("Incorrect username or password.");
     }, 1500);
   };
 
@@ -43,7 +43,6 @@ const LoginPage = () => {
         height="100vh"
         justifyContent="center"
         alignItems="center"
-        //bgGradient="linear(to-l, #DFA400, #FAB800, #DFA400)"
         bgImage="url('	https://atena.io/img/cloud-computing.jpg')"
         bgSize="cover"
         minH="100vh"

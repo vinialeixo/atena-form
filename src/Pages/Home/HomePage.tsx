@@ -7,7 +7,7 @@ const MotionBox = motion(Box);
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const hangleBackHome = () => {
+  const handleBackHome = () => {
     navigate("/login");
   };
 
@@ -30,9 +30,9 @@ const HomePage = () => {
           size="md"
           mt={10}
           mr={1000}
-          onClick={hangleBackHome}
+          onClick={handleBackHome}
         >
-          Voltar Login
+          Previous
         </Button>
 
         <Heading as="h1" size="4xl" mt={10} mb={8} color="white">

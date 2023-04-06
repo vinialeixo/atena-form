@@ -36,7 +36,7 @@ const ModalFormRegister = ({ onSubmit }: ModalFormRegisterProps) => {
   return (
     <form onSubmit={handleRegister}>
       <FormControl id="name" isRequired>
-        <FormLabel>Nome</FormLabel>
+        <FormLabel>Name</FormLabel>
         <Input type="text" value={name} onChange={handleNameChange} />
       </FormControl>
       <FormControl id="email" isRequired>
@@ -52,7 +52,7 @@ const ModalFormRegister = ({ onSubmit }: ModalFormRegisterProps) => {
         />
       </FormControl>
       <Button type="submit" mt={1}>
-        Registrar
+        Sign Up
       </Button>
     </form>
   );
